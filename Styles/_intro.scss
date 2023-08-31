@@ -67,7 +67,9 @@ nav {
   border-radius: 2rem;
 }
 
-.intro-text,
+.intro-text {
+  flex: 6 1 40rem;
+}
 .intro-images {
   flex: 1 1 40rem;
 }
