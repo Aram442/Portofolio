@@ -2,21 +2,21 @@
   width: 95%;
   margin: 0 0 0 auto;
 }
+
 nav {
-  @include flex(space-between, center, row); // using Helper Class
+  @include flex(space-between, center, row);
   min-height: 10vh;
   width: 60%;
-  flex-wrap: wrap; // To when we Resize The Screen the website to be Responsive
+  flex-wrap: wrap;
   .logo {
     @include flex(flex-start, center, row);
-    flex: 1 1 10rem; // grow , Shirink , basis
+    flex: 1 1 10rem;
     h1 {
       margin: 2rem;
     }
   }
-
   ul {
-    @include flex(space-between, center, row);
+    @include flex(space-around, center, row);
     flex: 1 1 40rem;
   }
 }
@@ -32,7 +32,8 @@ nav {
     padding-top: 2rem;
     background: $gradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent; // to Applay Gradeint to the Text fill Color
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline-block;
   }
   h3 {
@@ -67,9 +68,53 @@ nav {
   border-radius: 2rem;
 }
 
-.intro-text {
-  flex: 6 1 40rem;
-}
+.intro-text,
 .intro-images {
   flex: 1 1 40rem;
+}
+
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+
+#me {
+  animation: me 1s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+#clock-arrow {
+  animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
