@@ -323,4 +323,13 @@ footer h4 {
   .intro-social a {
     margin: 2rem;
   }
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projects img {
+    max-width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */

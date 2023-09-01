@@ -74,4 +74,11 @@ $gray-text: #2c2c2c;
       margin: 2rem;
     }
   }
+  .projects {
+    @include flex(center, center, column);
+
+    img {
+      max-width: 70%;
+    }
+  }
 }
